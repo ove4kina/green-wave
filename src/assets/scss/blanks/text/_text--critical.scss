@@ -1,0 +1,449 @@
+.text{
+    & + .text{
+        margin-top: toRemM(16);
+    }
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
+    }
+    h2, .h2{
+        font-family: bold;
+        font-size: toRemM(28);
+        line-height: toRemM(36);
+        margin: toRemM(16) 0;
+    }
+    h3, .h3 {
+        font-family: bold;
+        font-size: toRemM(24);
+        line-height: toRemM(32);
+        margin: toRemM(16) 0;
+    }
+    h4, .h4{
+        font-size: toRemM(20);
+        line-height: toRemM(28);
+        margin-bottom: toRemM(12);
+        font-family: bold;
+    }
+    p{
+        margin: toRemM(16) 0;
+        max-width: toRemM(400);
+        font-size: toRemM(14);
+        line-height: toRemM(20);
+        &.big{
+            font-size: toRemM(16);
+            line-height: toRemM(21);
+        }
+        & + ul.list {
+            margin-top: 0;
+        }
+    }
+    a{
+        font-size: toRemM(14);
+        line-height: toRemM(20);
+        color: $blue;
+        border-bottom:1px solid $blue;
+        &.no-border{
+            border: none;
+        }
+        &.card {
+            border-bottom: none;
+            padding: toRemM(16) toRemM(56) toRemM(16) toRemM(12);
+            position: relative;
+            max-width: toRemM(576);
+            text-align: left;
+    
+            font-size: toRemM(16);
+            line-height: toRemM(24);
+            color: $blue;
+    
+            display: block;
+            border-radius: toRemM(8);
+            box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.1);
+            &::after {
+                content: '\e910';
+                font-family: icon;
+                font-size: toRemM(14);
+                line-height: toRemM(14);
+                color: $blueDeep;
+                position: absolute;
+                top: toRemM(16);
+                right: toRemM(24);
+            }
+            & + a.card {
+                margin-top: toRemM(12);
+            }
+        }
+    }
+    b{
+        font-family: bold;
+    }
+    ul{
+        &.text{
+            margin-bottom: toRemM(32);
+            li{
+                display: block;
+                span{
+                    display: block;
+                    color: rgba(0, 0, 0, 0.5);
+                    font-size: toRemM(12);
+                    line-height: toRemM(18);
+                    margin-bottom: toRemM(4);
+                }
+                p{
+                    margin: 0;
+                    font-size: toRemM(16);
+                    line-height: toRemM(24);
+                }
+                &+li{
+                    margin-top: toRemM(20);
+                }
+            }
+        }
+
+        &.images{
+            margin: toRemM(24) 0 toRemM(40);
+            li{
+                max-width: toRemM(240);
+                font-size: toRemM(14);
+                line-height: toRemM(20);
+                img{
+                    display: block;
+                    margin-bottom: toRemM(8);
+                    width: toRemM(80);
+                    height: toRemM(80);
+                }
+            }
+        }
+        
+        &.images-3-6 {
+            margin: toRemM(24) toRemM(-40) toRemM(24) 0;
+    
+            li {
+                display: inline-block;
+                vertical-align: top;
+                width: calc(50% - 2.5rem);
+                box-sizing: border-box;
+                margin: 0 toRemM(40) toRemM(24) 0;
+            }
+        }
+        &:not([class]) {
+            max-width: toRemM(280);
+            margin: toRemM(16) 0;
+            li{
+                font-size: toRemM(14);
+                line-height: toRemM(20);
+                position: relative;
+                padding-left: toRemM(12);
+                box-sizing: border-box;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: toRemM(9);
+                    left: 0;
+                    width: toRemM(5);
+                    height: toRemM(5);
+                    border-radius: 50%;
+                    background: $green;
+                }
+                &+li{
+                    margin-top: toRemM(16);
+                }
+            }
+            &+ul:not([class]){
+                margin-top: toRemM(20);
+            }
+            & + p {
+                margin-top: 0;
+            }
+        }
+       
+    }
+    
+    ol {
+        counter-reset: ol-increment;
+        li {
+            font-size: toRemM(14);
+            line-height: toRemM(20);
+            box-sizing: border-box;
+            padding-left: toRemM(16);
+            position: relative;
+            counter-increment: ol-increment;
+            &::before {
+                content: counter(ol-increment) ".";
+                color: rgba($black, .6);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            
+            & + li {
+                margin-top: toRemM(16);
+            }
+        }
+    }
+    
+    & > img {
+        display: block;
+        width: 100%;
+        border-radius: toRemM(12);
+        max-height: 75vw;
+    }
+    
+    &--wide {
+        p {
+            max-width: toRemM(500);
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        a {
+            &.card {
+                & + a.card {
+                    margin-top: toRemM(16);
+                }
+            }
+        }
+        p{
+            &.big{
+                font-size: toRemM(18);
+                line-height: toRemM(26);
+            }
+            max-width: toRemM(400);
+            & + h4 {
+                margin-top: toRemM(32);
+            }
+            &+ul{
+                margin-top: 0 !important;
+            }
+        }
+        ul{
+            &.text{
+                margin-bottom: toRemM(40);
+                li{
+                    display: inline-block;
+                    vertical-align: top;
+                    width: toRemM(160);
+                    &+li{
+                        margin-top: 0;
+                        margin-left: toRemM(30);
+                    }
+                }
+            }
+
+            &.images{
+                white-space: nowrap;
+                box-sizing: border-box;
+                overflow-x: scroll;
+                -webkit-overflow-scrolling: touch;
+                overflow-y: hidden;
+                margin: toRemM(32) -5.5% toRemM(32);
+                padding: 0 5.5%;
+                li{
+                    white-space: normal;
+                    display: inline-block;
+                    vertical-align: top;
+                    max-width: toRemM(232);
+                    &+li{
+                        margin-left: toRemM(40);
+                    }
+                }
+            }
+            
+            &.images-3-6 {
+                margin: toRemM(32) 0;
+        
+                li {
+                    width: span(2 of 6);
+                    margin: 0 0 toRemM(32) 0;
+                    padding-right: toRemM(72);
+                    p {
+                        max-width: toRemM(200);
+                    }
+                }
+            }
+    
+            &:not([class]){
+                max-width: toRemM(266);
+                margin: toRemM(16) 0;
+                display: inline-block;
+                vertical-align: top;
+                
+                &+ul:not([class]){
+                    margin-top: toRemM(16);
+                    margin-left: toRemM(32);
+                }
+            }
+        }
+        ol {
+            li {
+                padding-left: toRemM(20);
+            }
+        }
+        & > img {
+            border-radius: toRemM(12);
+            margin: toRemM(24) auto;
+            width: 84%;
+            max-height: 37.5vw;
+        }
+    }
+    @media (min-width: $desktop){
+        & + .text{
+            margin-top: toRem(16);
+        }
+        h2, .h2{
+            font-size: toRem(40);
+            line-height: toRem(48);
+            margin: toRem(16) 0;
+        }
+        h3, .h3 {
+            font-size: toRem(32);
+            line-height: toRem(40);
+            margin-bottom: toRem(32);
+        }
+        h4, .h4{
+            font-size: toRem(24);
+            line-height: toRem(32);
+            margin-bottom: toRem(12);
+        }
+        p{
+            margin: toRem(16) 0;
+            max-width: toRem(400);
+            font-size: toRem(14);
+            line-height: toRem(20);
+            &.big{
+                font-size: toRem(18);
+                line-height: toRem(26);
+            }
+            & + h3 {
+                margin-top: toRem(40);
+            }
+        }
+        a{
+            font-size: toRem(14);
+            line-height: toRem(20);
+            &.card {
+                box-sizing: border-box;
+                display: inline-block;
+                vertical-align: top;
+                padding: toRem(16) toRem(60) toRem(16) toRem(20);
+                font-size: toRem(16);
+                line-height: toRem(24);
+                
+    
+                border-radius: toRem(8);
+                
+                width: toRem(280);
+                margin-right: toRem(30);
+                margin-bottom: toRem(30);
+                
+                
+                &::after {
+                    font-size: toRem(14);
+                    line-height: toRem(14);
+                    top: toRem(16);
+                    right: toRem(24);
+                }
+    
+                & + a.card {
+                    margin-top: 0;
+                }
+            }
+        }
+        ul{
+            &.text{
+                margin-bottom: toRem(40);
+                li{
+                    width: auto;
+                    span{
+                        font-size: toRem(12);
+                        line-height: toRem(18);
+                        margin-bottom: toRem(4);
+                    }
+                    p{
+                        font-size: toRem(16);
+                        line-height: toRem(24);
+                    }
+                    &+li{
+                        margin-left: toRem(40);
+                    }
+                }
+            }
+            &.images{
+                overflow: visible;
+                padding: 0;
+                margin: toRem(32) 0;
+                li{
+                    max-width: toRem(240);
+                    img{
+                        margin-bottom: toRem(16);
+                        width: toRem(80);
+                        height: toRem(80);
+                    }
+                    &+li{
+                        margin-left: toRem(40);
+                    }
+                }
+            }
+            &.images-3-6 {
+                margin: toRem(32) 0 toRem(8);
+        
+                li {
+                    width: span(3 of 10);
+                    max-width: none;
+                    margin: 0 0 toRem(32) 0;
+                    padding-right: toRem(80);
+                    p {
+                        max-width: toRem(200);
+                    }
+                }
+            }
+            &:not([class]){
+                margin: toRem(16) 0;
+                max-width: toRem(440);
+                li{
+                    max-width: toRem(440);
+                    font-size: toRem(14);
+                    line-height: toRem(20);
+                    padding-left: toRem(12);
+                    &::before{
+                        top: toRem(8);
+                        width: toRem(5);
+                        height: toRem(5);
+                    }
+                    &+li{
+                        margin-top: toRem(20);
+                    }
+                }
+                &+ul:not([class]){
+                    margin-top: toRem(16);
+                    margin-left: toRem(50);
+                }
+            }
+        }
+        ol {
+            li {
+                font-size: toRem(14);
+                line-height: toRem(20);
+                padding-left: toRem(20);
+            
+                & + li {
+                    margin-top: toRem(16);
+                }
+            }
+        }
+    
+        & > img {
+            width: 100%;
+            border-radius: toRem(12);
+            max-height: 25vw;
+        }
+    }
+    
+    &--wide {
+        p {
+            max-width: toRem(500);
+        }
+    }
+}

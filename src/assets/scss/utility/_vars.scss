@@ -1,0 +1,78 @@
+@import '../../../../node_modules/susy/sass/susy';
+$susy: ('columns': susy-repeat(48), 'gutters': 0, 'spread': 'narrow', 'container-spread': 'narrow', );
+
+
+
+//colors
+$white: #ffffff;
+
+$yellowBg: #FFE9B9;
+$yellow: #fff06d;
+$yellowLabel: #FFF06D;
+$yellowLabelLight: #FFDC81;
+$orange: #F9B057;
+$hoverYellow: #FFCE64;
+
+$violet: #6332CD;
+$blue: #349EFF;
+$blueLight: #52ACE9;
+$blueVk: #5376A4;
+$blueFb: #5D6FD0;
+$blueDeep: #0D1C2E;
+$hoverBlue: #0080F5;
+$hoverViolet: #662DED;;
+$blueActive: #003DEA;
+$blueHover: #28BFFF;
+
+
+//black
+$black: #000000;
+$blackLight: #525252;
+$blackLabel: #514400;
+
+//gray
+$grayDark: #8c8c8c;
+$gray: #DBDBDB;
+
+
+$green: #3DCD90;
+$greenDark: #2F7753;
+$greenMiddle: #1EAC70;
+$greenHover: #1BDB8A;
+
+$purpleDark: #6332CD;
+$purple: #C925B8;
+
+$brown: #9B5D00;
+$brownDark: #780700;
+$pinkLight: #FADDCF;
+
+$peach: #F39681;
+$pink: #E60041;
+$pinkLight: #FADDCF;
+$red:#FF4545;
+$redDark: #E30040;
+$burgundy: #780700;
+$hoverRed: #DD0F0F;
+
+$olive: #786500;
+
+
+//breakpoints
+$mobileMax: 639px;
+$tablet: 640px;
+$tabletMax: 1199px;
+$desktop: 1200px;
+$containerCollapse: 2050px;
+
+
+@function toRem($size) {
+    $remSize: $size / 12 + rem;
+    @return #{$remSize};
+}
+
+
+@function toRemM($size) {
+    $remSize: $size / 16 + rem;
+    @return #{$remSize};
+}

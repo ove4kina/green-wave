@@ -1,0 +1,119 @@
+.button{
+    @media (min-width: $desktop) {
+        &--nav{
+            &::before{
+                transition: color .3s ease;
+            }
+            &:hover{
+                &::before{
+                    color: $blue;
+                }
+            }
+        }
+        &--bg-green{
+            transition: background .3s ease;
+            &:hover{
+                background: $greenHover;
+
+            }
+        }
+        &--bg-blue{
+            transition: background .3s ease;
+            &:hover{
+                background: $blueHover;
+            }
+        }
+        &--bg-white{
+            span{
+                transition: color .3s ease;
+                &::before{
+                    transition: color .3s ease;
+                }
+            }
+            &:hover{
+                span{
+                    color: $green;
+                    &::before{
+                        color: $green;
+                    }
+                }
+            }
+        }
+        &--border-green{
+            transition: background .3s ease;
+            span{
+                transition: color .3s ease;
+                &::before{
+                    transition: color .3s ease;
+                }
+            }
+            &:hover{
+                background: $green;
+                span{
+                    color: #fff;
+                    &::before{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &--border-white{
+            transition: background .3s ease;
+            span{
+                transition: color .3s ease;
+                &::before{
+                    transition: color .3s ease;
+                }
+            }
+            &:hover{
+                background: #fff;
+                span{
+                    color: $green;
+                    &::before{
+                        color: $green;
+                    }
+                }
+            }
+        }
+        &--border-gray{
+            span{
+                transition: color .3s ease;
+                &::before{
+                    transition: color .3s ease;
+                }
+            }
+            &:hover{
+                span{
+                    color: $green;
+                    &::before{
+                        color: $green;
+                    }
+                }
+            }
+        }
+        &--bg-violet{
+            transition: background .3s ease;
+            &:hover{
+                background: $hoverViolet;
+            }
+        }
+        &--bg-yellow{
+            transition: background .3s ease;
+            &:hover{
+                background: $hoverYellow;
+            }
+        }
+        &--underline{
+            span{
+                transition: .3s ease;
+                transition-property: color, border-color;
+            }
+            &:hover{
+                span{
+                    color: #0E5AA0;
+                    border-color: #0E5AA0;
+                }
+            }
+        }
+    }
+}

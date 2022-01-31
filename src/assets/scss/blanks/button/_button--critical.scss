@@ -1,0 +1,381 @@
+.button {
+    &--icon {
+        font-family: reg!important;
+        span {
+            display: inline-block;
+            vertical-align: text-bottom;
+            line-height: normal;
+            &::before {
+                font-family: icon;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: toRemM(16);
+                line-height: toRemM(24);
+                margin-right: toRemM(8);
+                margin-top: -(toRemM(3));
+            }
+        }
+    }
+    &--icon-after{
+        span {
+            &::before{
+                display: none;
+            }
+            &::after {
+                font-family: icon;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: toRemM(16);
+                line-height: toRemM(24);
+                margin-left: toRemM(8);
+                margin-top: -(toRemM(3));
+            }
+        }
+    }
+    &--nav{
+        display: inline-block;
+        position: relative;
+        width: toRemM(56);
+        height: toRemM(56);
+        border-radius: toRemM(8);
+        background: #fff;
+        box-shadow: 0px toRemM(12) toRemM(40) rgba(0, 0, 0, 0.15);
+        &::before{
+            content: '\e904';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-family: icon;
+            font-size: toRemM(10);
+            color: #231F20;
+        }
+    }
+    &--small {
+        font-family: med;
+        padding: 0 toRemM(16);
+        font-size: toRemM(14);
+        line-height: toRemM(32);
+        border-radius: toRemM(8);
+        height: toRemM(32);
+    }
+
+    &--medium {
+        font-family: med;
+        padding: 0 toRemM(24);
+        font-size: toRemM(18);
+        line-height: toRemM(40);
+        height: toRemM(40);
+        border-radius: toRemM(12);
+    }
+
+    &--big {
+        text-align: center;
+        font-family: med;
+        padding: 0 toRemM(20);
+        line-height: toRemM(56);
+        font-size: toRemM(18);
+        border-radius: toRemM(16);
+        height: toRemM(56);
+    }
+    &--bg-green {
+        background-color: $green;
+    }
+    &--bg-white {
+        background-color: $white;
+    }
+    &--border-gray{
+        border: 1px solid $gray;
+        color: #000;
+        span{
+            &::before{
+                color: #000;
+            }
+        }
+    }
+    &--bg-blue {
+        background-color: $blue;
+    }
+    &--bg-violet{
+        background-color: $violet;
+    }
+    &--border-white{
+        border: 1px solid rgba($white,0.5);
+        span{
+            vertical-align: text-bottom;
+            color: #fff;
+            &::before{
+                vertical-align: unset;
+                color: #fff;
+            }
+        }
+    }
+    &--bg-yellow {
+        background-color: $yellowBg;
+    }
+
+    &--border-green{
+        border: 2px solid $green;
+        line-height: toRemM(52);
+    }
+
+    &--shadow-green {
+        box-shadow: 0px 5px 20px rgba(68, 195, 111, 0.5);
+    }
+    
+    &--shadow-blue {
+        box-shadow: 0px 5px 20px rgba(52, 158, 255, 0.5);
+    }
+    
+    &--shadow-violet {
+        box-shadow: 0px 5px 20px rgba(99, 50, 205, 0.5);
+    }
+    
+
+    
+    &--text-black {
+        color: $black;
+    }
+
+    &--text-green{
+        color: $greenMiddle;
+    }
+    
+    &--text-white {
+        color: $white;
+        &::before{
+            color: $white;
+        }
+    }
+    
+    &--mail {
+        span {
+            &::before {
+                content: '\e908';
+            }
+        }
+    }
+    
+    &--add-man {
+        span {
+            &::before {
+                content: '\e913';
+            }
+        }
+    }
+    
+    &--plane {
+        span {
+            &::before {
+                content: '\e90a';
+            }
+        }
+    }
+    
+    &--pencil {
+        span {
+            &::before {
+                content: '\e909';
+            }
+        }
+    }
+    
+    &--download {
+        span {
+            &::before {
+                content: '\e907';
+            }
+        }
+    }
+    &--stop {
+        span {
+            &::before {
+                content: '\e90b';
+            }
+        }
+    }
+    &--load{
+        span {
+            &::before {
+                content: '\e90f';
+            }
+        }
+    }
+    &--lock {
+        span {
+            &::before {
+                display: none;
+                content: '\e90e';
+            }
+        }
+    }
+    &--arrow {
+        span {
+            &::before {
+                font-size: toRemM(14);
+                line-height: toRemM(14);
+                content: '\e905';
+            }
+            &::after{
+                font-size: toRemM(14);
+                line-height: toRemM(14);
+
+            }
+        }
+        &.button--icon-after{
+            span{
+                &::after{
+                    content: '\e905';
+                }
+            }
+
+        }
+    }
+    &--arrow-one{
+        span{
+            &::before{
+                content: '\e914';
+                font-size: toRemM(15);
+                line-height: toRemM(15);
+                margin-right: toRemM(16);
+            }
+        }
+    }
+    &--arrow-top {
+        span {
+            &::before {
+                font-size: toRemM(14);
+                line-height: toRemM(14);
+                content: '\e905';
+                transform: rotate(-90deg);
+            }
+        }
+    }
+    &--ring{
+        span{
+            &::before{
+                content: '\e900';
+            }
+        }
+    }
+    &--link {
+        span {
+            &::before {
+                font-size: toRemM(18);
+                line-height: toRemM(18);
+                color: $green;
+                content: '\94';
+            }
+        }
+    }
+
+    &--underline{
+        font-size: toRemM(18);
+        line-height: toRemM(26);
+        span{
+            color: $blue;
+            display: inline-block;
+            border-bottom: 1px dashed $blue;
+        }
+    }
+    
+    &--disabled {
+        background-color: $gray;
+        color: $grayDark;
+        pointer-events: none;
+    }
+    @media (min-width: $tablet) {
+        &--lock {
+            span {
+                &::before {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        &--icon {
+            span {
+                &::before {
+                    font-size: inherit;
+                    line-height: toRem(24);
+                    margin-right: toRem(8);
+                    margin-top: -(toRem(3));
+                }
+            }
+        }
+        &--icon-after {
+            span {
+                &::after {
+                    font-size: inherit;
+                    line-height: toRem(24);
+                    margin-left: toRem(8);
+                    margin-top: -(toRem(3));
+                }
+            }
+        }
+        &--nav{
+            width: toRem(56);
+            height: toRem(56);
+            border-radius: toRem(8);
+            box-shadow: 0px toRem(12) toRem(40) rgba(0, 0, 0, 0.15);
+            &::before{
+                font-size: toRem(10);
+            }
+        }
+        &--small {
+            line-height: toRem(32);
+            height: toRem(32);
+            font-size: toRem(14);
+            padding: 0 toRem(16);
+            border-radius: toRem(8);
+        }
+        &--medium {
+            padding: 0 toRem(24);
+            font-size: toRem(18);
+            line-height: toRem(40);
+            height: toRem(40);
+            border-radius: toRem(16);
+        }
+        &--big {
+            height: toRem(56);
+            line-height: toRem(56);
+            font-size: toRem(18);
+            padding: 0 toRem(18);
+            border-radius: toRem(16);
+        }
+        &--underline {
+            font-size: toRem(18);
+            line-height: toRem(26);
+        }
+        &--arrow-top{
+            span {
+                &::before {
+                    font-size: toRem(14);
+                    line-height: toRem(14);
+                }
+            }
+        }
+
+        &--arrow-one{
+            span{
+                &::before{
+                    font-size: toRem(15);
+                    line-height: toRem(15);
+                    margin-right: toRem(16);
+                }
+            }
+        }
+        &--square-icon {
+            width: toRem(32);
+            height: toRem(32);
+            border-radius: toRem(8);
+            span {
+                &::before {
+                    font-family: icon;
+                    font-size: toRem(18);
+                }
+            }
+        }
+    }
+}

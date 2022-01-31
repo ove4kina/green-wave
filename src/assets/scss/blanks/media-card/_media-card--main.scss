@@ -1,0 +1,246 @@
+.media-card{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    border-radius: toRemM(8);
+    width: 100%;
+    height: 75vw;
+    box-sizing: border-box;
+    padding: toRemM(16) toRemM(12);
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+    }
+    img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+    }
+    &__tags{
+        position: relative;
+        z-index: 1;
+        &--bottom{
+            margin-bottom: toRemM(4);
+        }
+    }
+    &__tag{
+        &+&{
+            margin-left: toRemM(8);
+        }
+    }
+    &__bottom{
+        position: absolute;
+        bottom: toRemM(16);
+        left: toRemM(12);
+        width: calc(100% - 1.5rem);
+        z-index: 1;
+    }
+    p{
+        border-bottom: none;
+        font-size: toRemM(16);
+        line-height: toRemM(24);
+        &.blue{
+            color: $blue;
+            span{
+                border-bottom: 2px solid $blue;
+            }
+        }
+        &.white{
+            color: #fff;
+            span{
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+    &--wide{
+        height: 87.5vw;
+        p{
+            font-size: toRemM(32);
+            font-family: bold;
+            line-height: toRemM(40);
+        }
+        @media (max-width: $tabletMax) {
+            .media-card{
+                &__tags{
+                    &--top{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &--inner-link,&--outer-link{
+        &::before{
+            display: none;
+        }
+        &::after{
+            position: absolute;
+            font-family: icon;
+            right: toRemM(15);
+        }
+    }
+    &--inner-link{
+        &::after{
+            content: '\e910';
+            font-size: toRemM(15);
+            color: $blueDeep;
+            top: toRemM(17);
+        }
+    }
+    &--outer-link{
+        &::after{
+            content: '\94';
+            font-size: toRemM(18);
+            color: #fff;
+            top: toRemM(19);
+        }
+    }
+    @media (min-width: $tablet) {
+        height: 55.6vw;
+        width: calc(50% - 1rem);
+        max-height: 500px;
+        padding: toRemM(24) toRemM(16);
+        &__bottom{
+            width: calc(100% - 2rem);
+            bottom: toRemM(24);
+            left: toRemM(16);
+        }
+        &__tags{
+            &--bottom{
+                margin-bottom: toRemM(8);
+            }
+        }
+        &--wide{
+            width: calc(100% - 1rem);
+            height: 53.75vw;
+            p{
+                font-size: toRemM(28);
+                line-height: toRemM(36);
+                &.white{
+                    span{
+                        border-bottom: 4px solid #fff;
+                    }
+                }
+                &.blue{
+                    span{
+                        border-bottom: 4px solid $blue;
+                    }
+                }
+            }
+        }
+        &--inner-link,&--outer-link{
+            &::after{
+                right: toRemM(20);
+            }
+        }
+        &--inner-link{
+            &::after{
+                top: toRemM(29);
+            }
+        }
+        &--outer-link{
+            &::after{
+                top: toRemM(27);
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        max-height: none;
+        border-radius: toRem(8);
+        width: calc(33.3333% - 2.5rem);
+        padding: toRem(24) toRem(16);
+        height: toRem(380);
+        &::after {
+            content: '';
+            position: absolute;
+            opacity: 0;
+            transition: opacity .3s ease;
+            z-index: 1;
+            height: toRem(160);
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            background: -moz-linear-gradient(270deg, rgba(42,41,112,0) 0%, rgba(42,41,112,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(42,41,112,0)), color-stop(100%, rgba(42,41,112,1))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(270deg, rgba(42,41,112,0) 0%, rgba(42,41,112,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(270deg, rgba(42,41,112,0) 0%, rgba(42,41,112,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(270deg, rgba(42,41,112,0) 0%, rgba(42,41,112,1) 100%); /* ie10+ */
+            background: linear-gradient(180deg, rgba(42,41,112,0) 0%, rgba(42,41,112,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2A2970', endColorstr='#2A2970',GradientType=0 ); /* ie6-9 */
+        }
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        &__tags{
+            &--bottom{
+                margin-bottom: toRem(4);
+            }
+        }
+        &__tag{
+            &+&{
+                margin-left: toRem(8);
+            }
+        }
+        &__bottom{
+            width: calc(100% - 2.66666rem);
+            bottom: toRem(24);
+            left: toRem(16);
+            z-index: 2;
+        }
+        p{
+            font-size: toRem(16);
+            line-height: toRem(24);
+        }
+        &--wide{
+            padding: toRem(28) toRem(32);
+            width: calc(100% - 2.5rem);
+            p{
+                font-size: toRem(48);
+                line-height: toRem(56);
+            }
+            .media-card{
+                &__bottom{
+                    bottom: toRem(56);
+                    left: toRem(32);
+                }
+            }
+        }
+        &--inner-link,&--outer-link{
+            &::after{
+                right: toRem(20);
+            }
+        }
+        &--inner-link{
+            &::after{
+                font-size: toRem(15);
+                top: toRem(28);
+            }
+        }
+        &--outer-link{
+            &::after{
+                font-size: toRem(18);
+                top: toRem(26);
+            }
+        }
+    }
+    @media (min-width: 2050px) {
+        height: 720px;
+    }
+}

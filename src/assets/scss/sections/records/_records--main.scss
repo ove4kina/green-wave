@@ -1,0 +1,96 @@
+.records{
+    width: 100%;
+    box-sizing: border-box;
+    background: $yellowBg;
+    position: relative;
+    z-index: 1;
+    &__bottom,&__top{
+        position: absolute;
+        left: 0%;
+        width: 100%;
+        overflow: hidden;
+        font-size: 0;
+        img{
+            width: 110%;
+            margin-left: -5%;
+        }
+    }
+    &__top{
+        bottom: 100%;
+        margin-bottom: -1px;
+        z-index: 0;
+    }
+    &__bottom{
+        top: 100%;
+        margin-top: -1px;
+        z-index: 1;
+    }
+    &__title{
+        max-width: toRemM(384);
+        margin-bottom: toRemM(16);
+        display: block;
+    }
+    &__slider{
+        box-sizing: border-box;
+        margin-top: -(toRemM(30));
+        padding: toRemM(30) 6.25% toRemM(48);
+    }
+    &__buttons{
+        display: none;
+    }
+    
+    @media (min-width: $tablet) {
+        
+        &__title{
+            margin-bottom: toRemM(24);
+        }
+        &__slider{
+            margin-top: -(toRemM(30));
+            padding: toRemM(30) 5% toRemM(48);
+        }
+    }
+    @media (min-width: $desktop) {
+        &__title{
+            max-width: toRem(520);
+            margin-bottom: toRem(24);
+        }
+        &__slider{
+            margin-top: -(toRem(60));
+            padding: toRem(60) 0 toRem(72);
+            .swiper-wrapper{
+                box-sizing: border-box;
+                padding: 0 toRem(120);
+                max-width: 1800px;
+                margin: 0 auto;
+                @media (min-width: 2050px) {
+                    padding: 0;
+                }
+            }
+        }
+        &__container{
+            position: relative;
+        }
+        &__buttons{
+            display: block;
+            position: absolute;
+            top: 0;
+            right: toRem(120);
+            @media (min-width: 2050px) {
+                right: 0;
+            }
+        }
+        &__button{
+            display: inline-block;
+            vertical-align: top;
+            &--prev{
+                transform: rotate(90deg);
+            }
+            &--next{
+                transform: rotate(-90deg);
+            }
+            &+&{
+                margin-left: toRem(16);
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.page-info {
+    padding: toRemM(32) 0 toRemM(72);
+    
+    @media (min-width: $desktop) {
+        padding: toRem(36) 0 toRem(128);
+    }
+}

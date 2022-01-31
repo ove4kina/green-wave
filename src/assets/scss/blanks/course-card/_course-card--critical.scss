@@ -1,0 +1,151 @@
+.course-card{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    width: toRemM(256);
+    background: #fff;
+    box-shadow: 0px toRemM(12) toRemM(40) rgba(0, 0, 0, 0.15);
+    border-radius: toRemM(8);
+    &__image{
+        width: 100%;
+        height: toRemM(129);
+        position: relative;
+        &::before{
+            font-family: icon;
+            content: '\e911';
+            font-size: toRemM(24);
+            line-height: toRemM(24);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        img{
+            opacity: 0;
+            transition: .6s ease;
+            transition-property: opacity, transform;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: scale(1.05) translate(-50%,-50%);
+            min-width: 100%;
+            min-height: 100%;
+            height: 100%;
+            object-fit: cover;
+            &.loaded {
+                opacity: 1;
+                transform: scale(1) translate(-50%,-50%);
+            }
+        }
+    }
+    &__content{
+        box-sizing: border-box;
+        padding: toRemM(8) toRemM(16) toRemM(16);
+    }
+    &__tags{
+        margin-bottom: toRemM(4);
+    }
+    &__tag{
+        margin-bottom: toRemM(4);
+        margin-right: toRemM(8);
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__title{
+        display: block;
+        color: $blue;
+        font-size: toRemM(24);
+        line-height: toRemM(32);
+        margin-bottom: toRemM(12);
+        font-family: bold;
+        span{
+            border-bottom: toRemM(2) solid $blue;
+        }
+    }
+    &__text{
+        font-size: toRemM(14);
+        line-height: toRemM(20);
+        margin-bottom: toRemM(16);
+        color: $grayDark;
+        b{
+            font-family: bold;
+        }
+    }
+    &__button{
+        width: 100%;
+        padding: 0;
+        @media (max-width: $mobileMax) {
+            span{
+                &::before{
+                    font-size: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    @media (min-width: $tablet) {
+        width: toRemM(300);
+        &__image{
+            height: toRemM(178);
+        }
+        &__content{
+            padding: toRemM(10) toRemM(20) toRemM(24);
+        }
+    }
+    @media (min-width: $desktop) {
+        width: toRem(300);
+        box-shadow: 0px toRem(12) toRem(40) rgba(0, 0, 0, 0.15);
+        border-radius: toRem(8);
+        &__image{
+            height: toRem(178);
+        }
+        &__content{
+            padding: toRem(10) toRem(20) toRem(24);
+        }
+        &__title{
+            font-size: toRem(24);
+            line-height: toRem(32);
+            margin-bottom: toRem(12);
+            span{
+                border-bottom: toRem(2) solid $blue;
+            }
+        }
+        &__text{
+            font-size: toRem(14);
+            line-height: toRem(20);
+            margin-bottom: toRem(16);
+        }
+        &__tags{
+            margin-bottom: toRem(4);
+        }
+        &__tag{
+            margin-bottom: toRem(4);
+            margin-right: toRem(8);
+        }
+        &__button{
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.course-card{
+    @media (min-width: $desktop) {
+        transition: box-shadow .3s ease;
+        &:hover{
+            box-shadow: 0px toRem(12) toRem(60) rgba(0, 0, 0, 0.25);
+            .course-card{
+
+            }
+        }
+    }
+}

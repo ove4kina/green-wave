@@ -1,0 +1,50 @@
+.report{
+    width:100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: toRemM(72) 0 toRemM(112);
+    &__title{
+        &--big{
+            max-width: toRemM(410);
+            margin-bottom: toRemM(20);
+        }
+        &--small{
+            margin: toRemM(32) 0 toRemM(14);
+        }
+    }
+    &__back{
+        margin-bottom: toRemM(12);
+    }
+    h3{
+
+    }
+    @media (min-width: $tablet) {
+        padding: toRemM(92) 0 toRemM(136);
+        &__title{
+            &--big{
+                margin-bottom: toRemM(24);
+            }
+            &--small{
+                margin: toRemM(48) 0 toRemM(20);
+            }
+        }
+        &__back{
+            margin-bottom: toRemM(16);
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(128) 0 toRem(168);
+        &__title{
+            &--big{
+                max-width: toRem(840);
+                margin-bottom: toRem(36);
+            }
+            &--small{
+                margin: toRem(40) 0 toRem(18);
+            }
+        }
+        &__back{
+            margin-bottom: toRem(8);
+        }
+    }
+}

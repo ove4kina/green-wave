@@ -1,0 +1,36 @@
+.text-info{
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: toRemM(64);
+    overflow: hidden;
+    &__title{
+        margin-bottom: toRemM(12);
+    }
+    &__tasks{
+        p{
+            max-width: toRemM(280);
+        }
+    }
+    & + .groups{
+        padding-top: 0;
+    }
+    @media (min-width: $tablet) {
+        padding:toRemM(10) 0 toRemM(104);
+        &__tasks{
+            p{
+                max-width: toRemM(400);
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding:toRem(50) 0 toRem(104);
+        &__title{
+            margin-bottom: toRem(16);
+        }
+        &__tasks{
+            p{
+                max-width: toRem(400);
+            }
+        }
+    }
+}

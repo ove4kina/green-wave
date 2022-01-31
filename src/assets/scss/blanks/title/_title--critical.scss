@@ -1,0 +1,58 @@
+.title {
+    font-family: bold;
+    &--standart {
+        font-size: toRemM(28);
+        line-height: toRemM(36);
+    }
+    &--medium {
+        font-size:  toRemM(28);
+        line-height: toRemM(36);
+    }
+    &--white {
+        color: white;
+    }
+    &--small {
+        font-size: toRemM(24);
+        line-height: toRemM(32);
+    }
+    &--medium{
+        font-size: toRemM(28);
+        line-height: toRemM(36);
+    }
+    &--big {
+        font-size: toRemM(32);
+        line-height: toRemM(36);
+    }
+    &--center{
+        text-align: center;
+    }
+    
+    @media (min-width: $tablet) {
+        &--small {
+            font-size: toRemM(28);
+            line-height: toRemM(36);
+        }
+    }
+    @media (min-width: $desktop) {
+        &--standart {
+            font-size: toRem(48);
+            line-height: toRem(56);
+        }
+        &--medium {
+            font-size:  toRem(40);
+            line-height: toRem(48);
+        }
+        &--small {
+            font-size: toRem(32);
+            line-height: toRem(40);
+        }
+        &--medium{
+            font-size: toRem(40);
+            line-height: toRem(48);
+        }
+        &--big {
+            font-size: toRem(64);
+            line-height: toRem(64);
+        }
+    }
+}

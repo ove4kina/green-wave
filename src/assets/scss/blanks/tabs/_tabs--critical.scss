@@ -1,0 +1,102 @@
+.tabs {
+    position: relative;
+    
+    &__container {
+        margin: 0 -7%;
+        padding: 0 7%;
+        overflow-x: scroll;
+        white-space: nowrap;
+        
+    }
+    
+    &__list {
+        display: inline-block;
+        border-bottom: 2px solid rgba($white, 0.25);
+        
+        &--gray {
+            border-color: rgba($black, .25);
+        }
+    }
+    
+    &__item {
+        position: relative;
+        display: inline-block;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        font-family: bold;
+        font-size: toRemM(16);
+        line-height: toRemM(20);
+        padding-bottom: toRemM(8);
+        cursor: pointer;
+        & + & {
+            margin-left: toRemM(32);
+        }
+        &.active {
+            border-color: $white;
+            color: $white;
+            pointer-events: none;
+        }
+        &--white{
+            color: rgba($white, 0.25);
+        }
+        &--gray {
+            color: #8C8C8C;
+    
+            & + & {
+                margin-left: toRemM(24);
+            }
+            
+            &.active {
+                border-color: $blue;
+                color: $black;
+            }
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        &__container {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    }
+    @media (min-width: $desktop) {
+        &__container {
+            overflow: hidden;
+        }
+        &__item {
+            padding-bottom: toRem(8);
+            font-size: toRem(16);
+            line-height: toRem(20);
+            
+            & + & {
+                margin-left: toRem(32);
+            }
+            &--gray {
+                & + & {
+                    margin-left: toRem(24);
+                }
+            }
+        }
+        
+    }
+}
+
+.tabs{
+    @media (min-width: $desktop) {
+        &__item{
+            &--white{
+                transition: color .3s ease;
+                &:hover{
+                    color: rgba(#fff, 0.8);
+                }
+            }
+            &--gray{
+                transition: color .3s ease;
+                &:hover{
+                    color: rgba($black, 0.65);
+                }
+            }
+        }
+    }
+}

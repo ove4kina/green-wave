@@ -1,0 +1,69 @@
+.tag {
+    display: inline-block;
+    padding: 0 toRemM(8);
+    line-height: toRemM(24);
+    font-size: toRemM(12);
+    border-radius: toRemM(12);
+    &--white {
+        background-color: $white;
+        color: $blackLight;
+    }
+    &--yellow {
+        background-color: $yellowLabelLight;
+        color: $brown;
+    }
+    &--dark-purple{
+        background: $purpleDark;
+        color: #fff;
+    }
+    &--purple{
+        background-color: $purple;
+        color: #fff;
+    }
+    &--red{
+        background-color: $redDark;
+        color: #000;
+    }
+    &--pink {
+        background-color: $pink;
+        color: $white;
+    }
+    &--green{
+        background-color: $green;
+        color: #fff;
+    }
+    &--dark-green{
+        background-color: $greenDark;
+        color: #fff;
+    }
+    &--pink-light{
+        background-color: $pinkLight;
+        color: $brownDark;
+    }
+    &--yellow-bright {
+        background-color: $yellowLabel;
+        color: $blackLabel;
+    }
+    &--orange {
+        background-color: $orange;
+        color: rgba(#000, 0.75);
+    }
+    &--white-pale {
+        background-color: $white;
+        color: $blackLight;
+    }
+    &--gray {
+        background-color: $gray;
+        color: $blackLight;
+    }
+    &--blue{
+        background-color: $blue;
+        color: #fff;
+    }
+    @media (min-width: $desktop) {
+        padding: 0 toRem(8);
+        line-height: toRem(24);
+        font-size: toRem(12);
+        border-radius: toRem(12);
+    }
+}

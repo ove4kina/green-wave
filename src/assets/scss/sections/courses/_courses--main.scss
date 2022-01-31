@@ -1,0 +1,293 @@
+.courses {
+    &__title {
+        margin-bottom: toRemM(16);
+    }
+    
+    &__description {
+        padding: toRemM(16) 0 toRemM(72);
+    }
+    
+    &__image-group {
+        position: absolute;
+        top: toRemM(-40);
+        left: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    
+    &__about-text {
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__image {
+        position: absolute;
+        
+        &--wave-top-mobile {
+            bottom: 99.5%;
+            width: 100%;
+            left: 0;
+        }
+        
+        &--wave-bottom-mobile {
+            top: 99.5%;
+            width: 100.3%;
+            right: 0;
+        }
+        
+        &--wave-top-tablet {
+            display: none;
+        }
+        
+        &--wave-bottom-tablet {
+            display: none;
+        }
+        &--dots-tablet{
+            display: none;
+        }
+        &--dots-desktop{
+            display: none;
+        }
+        &--dots-mobile {
+            width: 6.875rem;
+            right: 0;
+            top: -5.25rem;
+        }
+        
+        &--circle {
+            width: toRemM(64);
+            right: toRemM(-12);
+        }
+    }
+    
+    &__more-about {
+        position: relative;
+        background-color: $yellowBg;
+        margin: 0 -7%;
+        padding: toRemM(16) 7%;
+        
+        p {
+            font-size: toRemM(14);
+            line-height: toRemM(21);
+            margin-bottom: toRemM(24);
+        }
+    }
+    
+    &__about-title {
+        font-family: bold;
+        font-size: toRemM(20);
+        line-height: toRemM(32);
+        margin-bottom: toRemM(8);
+    }
+    
+    &__button {
+        display: block;
+        max-width: toRemM(300);
+        & + & {
+            margin-top: toRemM(12);
+        }
+    }
+    
+    
+    @media (min-width: $tablet) {
+        &__title {
+            margin-bottom: toRemM(24);
+        }
+        
+        &__description {
+            padding: toRemM(16) 0 toRemM(52);
+        }
+        
+        &__image {
+            &--wave-top-mobile {
+                display: none;
+            }
+            
+            &--wave-bottom-mobile {
+                display: none;
+            }
+            
+            &--wave-top-tablet {
+                display: block;
+                bottom: 99.5%;
+                width: 100%;
+                height: 1.975vw;
+                left: 0;
+            }
+            
+            &--wave-bottom-tablet {
+                display: block;
+                top: 99%;
+                width: 100%;
+                height: 4.94375vw;
+                right: 0;
+            }
+            &--dots-mobile{
+                display: none;
+            }
+            &--dots-tablet {
+                display: block;
+                width: 17.75rem;
+                right: 0;
+                top: -2.3125rem;
+            }
+            
+            &--circle {
+                width: toRemM(96);
+                right: toRemM(40);
+            }
+        }
+        
+        &__more-about {
+            margin: 0 -5.6%;
+            padding: toRemM(28) 5.6%;
+            
+            p {
+                max-width: toRemM(384);
+                margin-bottom: toRemM(12);
+            }
+        }
+        &__about-title {
+            font-size: toRemM(24);
+            line-height: toRemM(32);
+            margin-bottom: toRemM(4);
+        }
+        
+        &__button {
+            & + & {
+                margin-top: toRemM(8);
+            }
+        }
+        
+        &__image-group {
+            top: toRemM(-17);
+        }
+    }
+    @media (min-width: $desktop) {
+        &__title {
+            margin-bottom: toRem(24);
+        }
+        
+        &__description {
+            padding: toRem(16) 0 0;
+        }
+        
+        &__image {
+            display: none;
+
+            &--dots-tablet{
+                display: none;
+            }
+            &--dots-desktop {
+                display: block;
+                width: 35.875rem;
+                right: -8rem;
+                top: -6.25rem;
+            }
+            
+            &--circle {
+                display: block;
+                width: toRem(96);
+                right: toRem(32);
+            }
+        }
+        
+        &__about-title {
+            font-size: toRem(24);
+            line-height: toRem(32);
+            margin-bottom: toRem(18);
+        }
+        
+        &__wrapper {
+            display: inline-block;
+            vertical-align: top;
+            width: span(5 of 10);
+        }
+        
+        &__more-about {
+            display: inline-block;
+            vertical-align: top;
+            
+            background: transparent url("../public/images/courses/about-bg.svg") no-repeat left;
+            background-size: contain;
+            width: span(4.5 of 10);
+            margin: toRem(52) 0 0 span(.5 of 10);
+            
+            padding: toRem(60) toRem(52) toRem(100);
+            box-sizing: border-box;
+            
+            p {
+                font-size: toRem(14);
+                line-height: toRem(21);
+                margin-bottom: toRem(20);
+            }
+        }
+        
+        &__button {
+            display: inline-block;
+            max-width: none;
+            & + & {
+                margin-top: toRem(16);
+            }
+        }
+        &__image-group {
+            top: toRem(-20);
+        }
+    }
+    
+    @media (min-width: $containerCollapse) {
+        &__image-group {
+            width: 85%;
+        }
+    }
+}
+
+.program-feature {
+    padding: toRemM(64) 0 toRemM(92);
+    
+    &__title {
+        margin-bottom: toRemM(16);
+    }
+    
+    &__description {
+        padding: toRemM(16) 0 toRemM(24);
+    }
+    
+    &__button {
+        & + & {
+            margin-top: toRemM(16);
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        padding: toRemM(72) 0 toRemM(112);
+        &__title {
+            margin-bottom: toRemM(24);
+        }
+        
+        &__button {
+            & + & {
+                margin-top: 0;
+                margin-left: toRemM(16);
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(72) 0 toRem(104);
+        &__title {
+            margin-bottom: toRem(24);
+        }
+        
+        &__description {
+            padding: toRem(16) 0 toRem(24);
+        }
+        
+        &__button {
+            & + & {
+                margin-left: toRem(16);
+            }
+        }
+    }
+}

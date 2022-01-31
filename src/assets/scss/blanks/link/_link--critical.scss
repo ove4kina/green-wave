@@ -1,0 +1,105 @@
+.link{
+    font-family: med;
+    span{
+        border-bottom: 2px solid transparent;
+    }
+    &--standart{
+        font-size: toRemM(14);
+        line-height: toRemM(20);
+    }
+    &--big{
+        font-size: toRemM(18);
+        line-height: toRemM(28);
+    }
+    &--medium{
+        font-size: toRemM(12);
+        line-height: toRemM(20);
+    }
+    &--small{
+        font-size: toRemM(8);
+        line-height: toRemM(12);
+        font-family: reg;
+        span {
+            border-bottom: 1px solid transparent;
+        }
+
+    }
+    &--white{
+        span{
+            color: $white;
+            border-color: rgba($white,0.5)
+        }
+    }
+    &--border-none{
+        span{
+            border: none;
+        }
+    }
+    &--blue{
+        span{
+            color: $blue;
+            border-color:  rgba($blue,0.5)
+        }
+    }
+    &--return {
+        font-size: toRemM(14);
+        line-height: toRemM(24);
+        display: inline-block;
+        color: $blue;
+        span {
+            &::before {
+                font-family: icon;
+                content: '\e905';
+                display: inline-block;
+                vertical-align: middle;
+                font-size: toRemM(14);
+                transform: rotate(180deg);
+                margin-right: toRemM(8);
+                padding-top: toRemM(2);
+            }
+        }
+    }
+    &--disabled{
+        opacity: 0.75;
+        pointer-events: none;
+        span{
+            border-color: transparent;
+        }
+    }
+    @media (min-width: $desktop) {
+        &--standart{
+            font-size: toRem(14);
+            line-height: toRem(20);
+        
+        }
+        &--big{
+            font-size: toRem(18);
+            line-height: toRem(28);
+        }
+        &--medium{
+            font-size: toRem(12);
+            line-height: toRem(20);
+        }
+        &--small{
+            font-size: toRem(8);
+            line-height: toRem(12);
+        }
+        &--return {
+            font-size: toRem(12);
+            line-height: toRem(24);
+            span {
+                &::before {
+                    font-size: toRem(14);
+                    margin-right: toRem(8);
+                    padding-top: toRem(2);
+                }
+            }
+        }
+        &--white {
+            span {
+                color: $white;
+                border-color: rgba($white, 0.5);
+            }
+        }
+    }
+}

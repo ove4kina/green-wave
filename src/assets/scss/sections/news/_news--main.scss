@@ -1,0 +1,50 @@
+.news{
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    padding: toRemM(102) 0 toRemM(112);
+    &__title{
+        margin-bottom: toRemM(16);
+    }
+    &__slider{
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        margin: toRemM(20) -7% 0;
+        padding: 0 7%;
+    }
+    &__card{
+        margin-right: toRemM(12);
+        white-space: normal;
+    }
+    @media (min-width: $tablet) {
+        padding: toRemM(136) 0 toRemM(128);
+        &__title{
+            margin-bottom: toRemM(12);
+        }
+        &__slider{
+            margin: toRemM(40) -5.5% 0;
+            padding: 0 5.5%;
+            @media (min-width: 1060px) {
+                overflow: visible;
+            }
+        }
+        &__card{
+            margin-right: toRemM(30);
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(154) 0 toRem(144);
+        &__title{
+            margin-bottom: toRem(12);
+        }
+        &__slider{
+            margin: toRem(32) 0 0;
+            padding: 0;
+        }
+        &__card{
+            margin-right: toRem(30);
+        }
+    }
+}

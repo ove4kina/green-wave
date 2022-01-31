@@ -1,0 +1,11 @@
+.text{
+    a.card{
+        transition: color .3s ease;
+        &:hover{
+            color: $hoverBlue;
+        }
+        &:active{
+            color: #0E5AA0;
+        }
+    }
+}

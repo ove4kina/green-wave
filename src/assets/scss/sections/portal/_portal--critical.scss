@@ -1,0 +1,83 @@
+.portal{
+    width: 100%;
+    box-sizing: border-box;
+    padding: toRemM(72) 0 toRemM(64);
+    &__card{
+        margin-bottom: toRemM(16);
+    }
+    &__text{
+        max-width: toRemM(400);
+    }
+    &__button{
+        display: block;
+        width: toRemM(280);
+        margin: toRemM(8) auto 0;
+    }
+    @media (max-width: $mobileMax) {
+        &__title{
+            display: none;
+        }
+        &__text{
+            display: none;
+        }
+        &__select{
+            display: none;
+        }
+    }
+    @media (min-width: $tablet) {
+        padding: toRemM(104) 0 toRemM(64);
+        &__container{
+            position: relative;
+        }
+        &__title{
+            margin-bottom: toRemM(16);
+        }
+        &__text{
+            max-width: toRemM(400);
+            margin-bottom: toRemM(16);
+        }
+        &__select{
+            position: absolute;
+            top: -(toRemM(8));
+            right: 5%;
+        }
+        &__wrapper{
+            margin-right: -(toRemM(16));
+        }
+        &__card{
+            margin-right: toRemM(16);
+        }
+        &__button{
+            width: toRemM(268);
+            margin: toRemM(16) auto 0;
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(148) 0 toRem(72);
+        &__title{
+            margin-bottom: toRem(24);
+        }
+        &__text{
+            margin-bottom: toRem(32);
+        }
+        &__select{
+            position: absolute;
+            top: toRem(6);
+            right: toRem(120);
+            @media (min-width: 2050px) {
+                right: 0;
+            }
+        }
+        &__wrapper{
+            margin-right: -(toRem(30));
+        }
+        &__card{
+            margin-right: toRem(30);
+            margin-bottom: toRem(30);
+        }
+        &__button{
+            width: toRem(268);
+            margin: toRem(2) auto 0;
+        }
+    }
+}

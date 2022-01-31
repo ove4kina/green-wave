@@ -1,0 +1,25 @@
+.link{
+    &--white{
+        span{
+            transition: border-color .3s ease;
+        }
+        &:hover{
+            span{
+                color: $white;
+                border-color: $white;
+            }
+        }
+    }
+    &--blue{
+        span{
+            transition: .3s ease;
+            transition-property: border-color,color;
+        }
+        &:hover{
+            span{
+                border-color: $blue;
+                color: $blue;
+            }
+        }
+    }
+}

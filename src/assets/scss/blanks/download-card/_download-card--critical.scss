@@ -1,0 +1,112 @@
+.download-card {
+    padding: toRemM(16) toRemM(12);
+    position: relative;
+    
+    text-align: left;
+    
+    border-radius: toRemM(8);
+    box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
+    
+    
+    &__column {
+        color: $blue;
+        display: inline-block;
+        vertical-align: top;
+        
+        &--title {
+            box-sizing: border-box;
+            padding-right: toRemM(14);
+            font-size: toRemM(16);
+            line-height: toRemM(24);
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 78.2258%;
+            &::before {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        
+        &--filesize {
+            font-size: toRemM(14);
+            line-height: toRemM(22);
+            width: 21.774193%;
+            text-align: center;
+            
+            &::after {
+                font-family: icon;
+                font-size: toRemM(18);
+                line-height: toRemM(18);
+                
+                content: '\e907';
+                
+                display: inline-block;
+                width: 100%;
+                padding-top: toRemM(4);
+            }
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.1);
+        &__column {
+            &--title {
+                padding-right: toRemM(51);
+                width: span(5 of 6);
+            }
+        
+            &--filesize {
+                font-size: toRemM(16);
+                line-height: toRemM(24);
+                width: span(1 of 6);
+                text-align: right;
+                vertical-align: middle;
+            
+                &::after {
+                    width: auto;
+                    vertical-align: middle;
+                    padding-top: 0;
+                    margin-left: toRemM(8);
+                }
+            }
+        }
+    }
+    
+    @media (min-width: $desktop) {
+        padding: toRem(16) toRem(20);
+    
+        border-radius: toRem(8);
+        
+        box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
+    
+    
+        &__column {
+            &--title {
+                padding-right: 0;
+                font-size: toRem(16);
+                line-height: toRem(24);
+                width: span(4 of 6);
+            }
+        
+            &--filesize {
+                width: span(2 of 6);
+                padding-left: toRem(32);
+                box-sizing: border-box;
+                font-size: toRem(16);
+                line-height: toRem(24);
+            
+                &::after {
+                    font-size: toRem(18);
+                    line-height: toRem(18);
+                    margin-left: toRem(8);
+                }
+            }
+        }
+    }
+}

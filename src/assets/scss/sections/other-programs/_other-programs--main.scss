@@ -1,0 +1,96 @@
+.other-programs {
+    background-color: $violet;
+    color: $white;
+    padding-top: toRemM(20);
+    padding-bottom: toRemM(40);
+    position: relative;
+    &__top,&__bottom{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 110%;
+            margin-left: -5%;
+            &.tablet{
+                display: none;
+            }
+            &.desktop{
+                display: none;
+            }
+        }
+    }
+    &__top{
+        bottom: 100%;
+        margin-bottom: -2px;
+    }
+    &__bottom{
+        top: 100%;
+        margin-top: -2px;
+    }
+    &__tabs {
+        margin-top: toRemM(16);
+    }
+    &__programs {
+        margin: toRemM(24) -7% 0;
+        padding: 0 7%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    &__item {
+        & + & {
+            margin-left: toRemM(24);
+        }
+    }
+    @media (min-width: $tablet) {
+        &__top,&__bottom{
+            img{
+                &.mobile{
+                    display: none;
+                }
+                &.tablet{
+                    display: block;
+                }
+            }
+        }
+        &__programs {
+            margin: toRemM(32) -5.4% 0;
+            padding: 0 5.4%;
+        }
+        &__item {
+            & + & {
+                margin-left: toRemM(30);
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding-top: toRem(24);
+        &__top,&__bottom{
+            img{
+                &.tablet{
+                    display: none;
+                }
+                &.desktop{
+                    display: block;
+                }
+            }
+        }
+        &__tabs {
+            margin-top: toRem(24);
+        }
+        &__programs {
+            overflow: hidden;
+            white-space: normal;
+        }
+        &__item {
+            & + & {
+                margin-left: toRem(90);
+            }
+            &:nth-child(3n+4) {
+                margin-left: 0;
+            }
+        }
+    }
+}
+

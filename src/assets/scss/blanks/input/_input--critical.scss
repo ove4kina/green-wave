@@ -1,0 +1,109 @@
+.input {
+    &.error {
+        .input__value {
+            border-color: $red;
+        }
+    }
+    position: relative;
+    z-index: 1;
+    &--datepicker{
+        &::before{
+            content: '\e906';
+            position: absolute;
+            top: 50%;
+            right: toRemM(20);
+            font-size: toRemM(20);
+            font-family: icon;
+            transform: translate(0,-50%);
+            color: #959595;
+        }
+    }
+    &__value{
+        height: toRemM(48);
+        border: 1px solid $gray;
+        border-radius: toRemM(8);
+        padding: 0 toRemM(16);
+        color: $blackLight;
+        font-size: toRemM(16);
+        line-height: toRemM(24);
+    }
+    &__datepicker{
+        position: absolute!important;
+        top: 100%;
+        right: 0;
+        margin-top: toRemM(4);
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(0,10px);
+        &.active{
+            opacity: 1;
+            transform: translate(0,0);
+            pointer-events: all;
+        }
+        .mx-table-date td, .mx-table-date th {
+            height: 32px;
+            font-size: 12px;
+            line-height: 32px;
+        }
+    }
+    @media (min-width: $desktop) {
+        &--datepicker{
+            &::before{
+                right: toRem(20);
+                font-size: toRem(20);
+            }
+        }
+        &__value{
+            height: toRem(48);
+            border-radius: toRem(8);
+            padding: 0 toRem(16);
+            font-size: toRem(16);
+            line-height: toRem(24);
+        }
+        &__datepicker{
+            margin-top: toRem(4);
+        }
+    }
+    
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: reg;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    &::-webkit-input-placeholder {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
+    &::-moz-placeholder {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
+    
+    &:-moz-placeholder {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
+    
+    &:-ms-input-placeholder {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+    }
+    
+}
+
+.mx-datepicker-main{
+    border-radius: toRemM(8);
+    border-color: $gray;
+    @media (min-width: $desktop) {
+        border-radius: toRem(8);
+    }
+}

@@ -1,0 +1,91 @@
+.select{
+    width: 100%;
+    box-sizing: border-box;
+    height: toRemM(48);
+    max-width: toRemM(272);
+    border: 1px solid $gray;
+    border-radius: toRemM(8);
+    position: relative;
+    z-index: 2;
+    &::before{
+        content: '\e904';
+        position: absolute;
+        font-family: icon;
+        font-size: toRemM(6);
+        top: 50%;
+        right: toRemM(24);
+        transform: translate(0, -50%);
+        pointer-events: none;
+    }
+    &__value{
+        line-height: toRemM(48);
+        font-size: toRemM(18);
+        padding: 0 toRemM(16);
+        &.gray{
+            color: $blackLight;
+        }
+        &.black{
+            color: #000;
+        }
+    }
+    &__list{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: toRemM(4);
+        background-color: $white;
+        border-radius: toRemM(8);
+        border: 1px solid $gray;
+        width: 100%;
+        z-index: 2;
+        opacity: 0;
+        transform: translate(0,10px);
+        pointer-events: none;
+        overflow: hidden;
+        height: 218px;
+        max-height: 218px;
+        box-sizing: border-box;
+    }
+    &__item{
+        padding: toRemM(12) toRemM(16);
+        font-size: toRemM(16);
+        color: $blackLight;
+        &:first-child{
+            margin-top: toRemM(8);
+        }
+        &:last-of-type{
+            margin-bottom: toRemM(8);
+        }
+    }
+    @media (min-width: $desktop) {
+        height: toRem(48);
+        max-width: toRem(272);
+        
+        border-radius: toRem(8);
+        &::before{
+            font-size: toRem(6);
+            right: toRem(24);
+        }
+        &__value{
+            line-height: toRem(48);
+            font-size: toRem(18);
+            padding: 0 toRem(16);
+        }
+        &__list{
+            margin-top: toRem(4);
+            border-radius: toRem(8);
+            height: toRem(218);
+            max-height: toRem(218);
+        }
+        &__item{
+            padding: toRem(12) toRem(16);
+            font-size: toRem(16);
+            &:first-child{
+                margin-top: toRem(8);
+            }
+            &:last-of-type{
+                margin-bottom: toRem(8);
+            }
+        }
+    }
+}

@@ -1,0 +1,189 @@
+.order{
+    padding: toRemM(72) 0 toRemM(76);
+    &__container{
+        position: relative;
+        z-index: 1;
+    }
+    &__title{
+        margin-bottom: toRemM(16);
+        max-width: toRemM(300);
+    }
+    &__text{
+        margin-bottom: toRemM(20);
+        max-width: toRemM(400);
+    }
+    &__background{
+        @media (max-width: $mobileMax) {
+            display: none;
+        }
+    }
+    @media (min-width: $tablet) {
+        padding: 15vw 0 16.875vw;
+        position: relative;
+        overflow: hidden;
+        &__title{
+            margin-bottom: toRemM(12);
+        }
+        &__background{
+            position: absolute;
+            right: -12.5%;
+            bottom: 54.9%;
+            width: 52.7%;
+            transform: translate(0, 50%);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(128) 0 toRem(200);
+        &__title{
+            margin-bottom: toRem(12);
+            max-width: toRem(350);
+        }
+        &__text{
+            margin-bottom: toRem(20);
+            max-width: toRem(400);
+        }
+        &__background{
+            right: 0;
+            bottom: 53.9%;
+            max-width: 950px;
+        }
+    }
+}
+
+.form{
+    position: relative;
+    &__stage {
+        position: absolute;
+        width: 100%;
+        transition: .4s ease;
+        transition-property: opacity, transform;
+        &--body {
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        &--preloader {
+            position: absolute;
+            box-sizing: border-box;
+            left: 0;
+            top: toRemM(120);
+            pointer-events: none;
+            opacity: 0;
+            text-align: center;
+        }
+        
+        &--response {
+            transition-delay: .3s;
+            position: absolute;
+            padding: toRemM(52) 0;
+            text-align: center;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(15px);
+            
+            p {
+                font-size: toRemM(32);
+                line-height: toRemM(40);
+                margin-bottom: toRemM(16);
+                font-family: bold;
+            }
+            
+            span {
+                font-size: toRemM(14);
+                line-height: toRemM(20);
+            }
+        }
+    }
+    &.loading {
+        .form__stage {
+            &--body {
+                opacity: 0.5;
+                pointer-events: none;
+                transform: scale(0.95);
+            }
+            &--preloader {
+                opacity: 1;
+            }
+        }
+    }
+    &.send {
+        .form__stage {
+            &--body {
+                opacity: 0;
+                transform: translateY(-15px) scale(0.95);
+                pointer-events: none;
+            }
+            &--preloader {
+                opacity: 0;
+                pointer-events: none;
+            }
+            &--response {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+    
+    
+    &__line{
+        max-width: toRemM(320);
+        & + &{
+            margin-top: toRemM(16);
+        }
+    }
+    &__privacy{
+        font-size: toRemM(12);
+        line-height: toRemM(18);
+        color: $grayDark;
+        margin-top: toRemM(12);
+        max-width: toRemM(300);
+        a{
+            color: $blue;
+        }
+    }
+    @media (min-width: $tablet) {
+        &__privacy{
+            font-size: toRemM(8);
+            line-height: toRemM(12);
+        }
+    }
+    @media (min-width: $desktop) {
+        &__line{
+            max-width: toRem(320);
+            & + &{
+                margin-top: toRem(16);
+            }
+        }
+        &__privacy{
+            font-size: toRem(8);
+            line-height: toRem(12);
+            margin-top: toRem(12);
+            max-width: toRem(300);
+        }
+        &__stage {
+            &--preloader {
+                top: toRem(120);
+            }
+        
+            &--response {
+                padding: toRem(52) 0;
+                p {
+                    font-size: toRem(32);
+                    line-height: toRem(40);
+                    margin-bottom: toRem(16);
+                }
+            
+                span {
+                    font-size: toRem(14);
+                    line-height: toRem(20);
+                }
+            }
+        }
+    }
+}

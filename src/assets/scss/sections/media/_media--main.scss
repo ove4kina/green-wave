@@ -1,0 +1,160 @@
+.media{
+    box-sizing: border-box;
+    padding-top: toRemM(72);
+    overflow: hidden;
+    &__title{
+        margin-bottom: toRemM(4);
+    }
+    &__right{
+        margin-bottom: toRemM(32);
+        span{
+            font-size: toRemM(18);
+            line-height: toRemM(24);
+            vertical-align: middle;
+        }
+    }
+    &__select{
+        margin-top: toRemM(10);
+    }
+    &__slider{
+        margin-bottom: toRemM(24);
+    }
+    &__text{
+        max-width: toRemM(400);
+        font-size: toRemM(14);
+        line-height: toRemM(20);
+        margin-bottom: toRemM(16);
+    }
+    @media (min-width: $tablet) {
+        padding-top: toRemM(134);
+        &__title{
+            margin-bottom: toRemM(32);
+        }
+        &__wrapper{
+            position: relative;
+        }
+        &__right{
+            margin-bottom: 0;
+            position: absolute;
+            right: 0;
+            top: -(toRemM(6));
+            width: 100%;
+            text-align: right;
+        }
+        &__select{
+            text-align: left;
+            margin-top: 0;
+            margin-left: toRemM(12);
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &__slider{
+            margin-bottom: toRemM(24);
+        }
+        &--select{
+            .media{
+                &__title{
+                    margin-bottom: toRemM(16);
+                }
+                &__right{
+                    margin-bottom: toRemM(16);
+                    position: relative;
+                    right: auto;
+                    top: auto;
+                    text-align: left;
+                }
+                &__select{
+                    margin: 0;
+                    & + .media__select{
+                        margin-left: toRemM(12);
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding-top: toRem(128);
+        &__title{
+            margin-bottom: toRem(40);
+        }
+        &__right{
+            top: toRem(5);
+            span{
+                font-size: toRem(18);
+                line-height: toRem(24);
+            }
+        }
+        &__select{
+            margin-left: toRemM(16);
+        }
+        &__slider{
+            margin-bottom: toRem(24);
+        }
+        &__text{
+            max-width: toRem(400);
+            font-size: toRem(14);
+            line-height: toRem(20);
+            margin-bottom: toRem(16);
+        }
+        &--select{
+            .media{
+                &__title{
+                    margin-bottom: toRem(40);
+                }
+                &__right{
+                    margin-bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    top: toRemM(8);
+                    width: 100%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
+
+.teachers {
+    & + .media {
+        padding-top: toRemM(108);
+    }
+    & + .order {
+        margin-top: toRemM(108);
+    }
+    @media (min-width: $tablet) {
+        & + .media {
+            padding-top: 20.9375vw;
+        }
+        & + .order {
+            margin-top: 15vw;
+        }
+    }
+    
+    @media (min-width: $desktop) {
+        & + .media {
+            padding-top: 16vw;
+        }
+        & + .order {
+            margin-top: 15rem;
+        }
+    }
+}
+
+.actual-people-main + .media{
+    padding-top:34.7vw;
+    @media (min-width: $tablet) {
+        padding-top:23.44vw;
+    }
+    @media (min-width: $desktop) {
+        padding-top:15.33333vw;
+    }
+}
+.media + .socials{
+    margin-top: toRemM(56);
+    @media (min-width: $tablet) {
+        margin-top: toRemM(64);
+    }
+    @media (min-width: $desktop) {
+        margin-top: toRem(72);
+    }
+}

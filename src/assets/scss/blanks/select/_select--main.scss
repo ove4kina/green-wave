@@ -1,0 +1,43 @@
+.select{
+    &__list{
+        transition: 0.1s ease;
+        transition-property: opacity,transform;
+    }
+    &__item{
+        transition: 0.3s ease;
+        transition-property: color;
+        cursor: pointer;
+        &.active{
+            color: $black;
+            background-color: rgba($grayDark, 0.1);
+        }
+    }
+    &__value{
+        cursor: pointer;
+    }
+    &::before{
+        transition: transform 0.1s ease;
+    }
+    &.active{
+        &::before{
+            transform: translate(0, -50%) rotate(180deg);
+            transition-duration: 0.3s;
+        }
+        .select{
+            &__list{
+                opacity: 1;
+                transform: translate(0,0);
+                pointer-events: all;
+                transition-duration: 0.3s;
+                z-index: 999;
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        &__item{
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+}

@@ -1,0 +1,227 @@
+.footer{
+    padding: toRemM(12) 0 toRemM(62);
+    background-color: $green;
+    position: relative;
+    &__wave{
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        width: 100%;
+        font-size: 0;
+        img{
+            width: 100%;
+        }
+    }
+    &__logo{
+        width: toRemM(130);
+        margin-bottom: toRemM(20);
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        color: $white;
+    }
+    &__top{
+        padding-bottom: toRemM(20);
+    }
+    &__body{
+        font-size: 0;
+    }
+    &__body{
+        padding-top: toRemM(12);
+        border-bottom: 1px solid rgba($white,0.25);
+        border-top: 1px solid rgba($white,0.25);
+    }
+    &__button{
+        @media (max-width: $mobileMax) {
+            display: none;
+        }
+    }
+    &__bottom{
+        padding-top: toRemM(16);
+        p{
+            font-size: toRemM(8);
+            line-height: toRemM(12);
+            color: rgba($white,0.75)
+
+        }
+        a{
+            & + a{
+                margin-left: toRemM(12);
+            }
+        }
+    }
+    &__right {
+        p {
+            font-size: toRemM(8);
+            line-height: toRemM(12);
+            color: $white;
+        }
+    }
+    &__left{
+        margin-bottom: toRemM(12);
+    }
+    @media (min-width: $tablet) {
+        &__text{
+            max-width: toRemM(550);
+        }
+        &__top{
+            padding-bottom: toRemM(24);
+            position: relative;
+        }
+        
+        &__body{
+            padding-top: toRemM(16);
+        }
+        &__button{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &__bottom{
+            padding-top: toRemM(12);
+            font-size: 0;
+        }
+        &__left{
+            margin-bottom: 0;
+            display: inline-block;
+            vertical-align: top;
+            width: 50%;
+        }
+        &__right{
+            width: 50%;
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            p {
+                display: inline-block;
+                & + a {
+                    margin-left: toRemM(12);
+                }
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(12) 0 toRem(44);
+        &__logo{
+            display: inline-block;
+            vertical-align: middle;
+            width: toRem(130);
+            margin-right: toRem(24);
+            margin-bottom: 0;
+        }
+        &__text{
+            max-width: toRem(550);
+            display: inline-block;
+            vertical-align: middle;
+            p{
+                max-width: none;
+            }
+        }
+        &__top{
+            padding-bottom: toRem(24);
+        }
+    
+        
+        &__body{
+            border-bottom: 1px solid rgba($white,0.25);
+            border-top: 1px solid rgba($white,0.25);
+            padding: toRem(12) 0 toRem(32);
+        }
+        
+        &__bottom{
+            padding-top: toRem(16);
+        }
+        &__left{
+            width: span(7 of 10);
+            p{
+                font-size: toRem(8);
+                line-height: toRem(12);
+            }
+            a{
+                & + a{
+                    margin-left: toRem(12);
+                }
+            }
+        }
+        &__right{
+            width: span(3 of 10);
+            p {
+                font-size: toRem(8);
+                line-height: toRem(12);
+                & + a {
+                    margin-left: toRem(12);
+                }
+            }
+        }
+    }
+}
+
+.site-card{
+    &__list{
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: toRemM(32);
+        box-sizing: border-box;
+        padding-right: toRemM(4);
+        &--wide{
+            @media (max-width: $mobileMax) {
+                width: 100%;
+            }
+        }
+    }
+    &__item{
+        display: block;
+        & + &{
+            margin-top: toRemM(12);
+        }
+        &--title{
+            & + .footer__item{
+                margin-top: toRemM(16);
+            }
+        }
+        
+    }
+    &__button{
+        margin-top: toRemM(20);
+    }
+    @media (min-width: $tablet) {
+        &__list{
+            width: span(2 of 6);
+            margin-bottom: toRemM(40);
+            padding-right: toRemM(20);
+            max-width: toRemM(192);
+        
+        }
+        &__button{
+            margin-top: toRemM(24);
+        }
+    }
+    @media (min-width: $desktop) {
+        &__list{
+            width: span(2 of 10);
+            margin-bottom: 0;
+            padding-right: toRem(20);
+            max-width: none;
+        }
+        &__item{
+            & + &{
+                margin-top: toRem(12);
+            }
+            &--title{
+                & + .footer__item{
+                    margin-top: toRem(16);
+                }
+            }
+        }
+        &__button{
+            margin-top: toRem(24);
+        }
+    }
+}
+
+.footer{
+
+}

@@ -1,0 +1,160 @@
+.all-people {
+    background-color: $violet;
+    color: $white;
+    padding-top: toRemM(8);
+    padding-bottom: toRemM(20);
+    position: relative;
+    &--special-camp {
+        padding-top: toRemM(72);
+    }
+    &__point {
+        position: absolute;
+        bottom: 76%;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        img {
+            &.tablet {
+                display: none;
+            }
+            &.desktop {
+                display: none;
+            }
+        }
+    }
+    &__top, &__bottom{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 110%;
+            margin-left: -5%;
+            &.tablet{
+                display: none;
+            }
+            &.desktop{
+                display: none;
+            }
+        }
+    }
+    &__top{
+        bottom: 100%;
+        margin-bottom: -25px;
+    }
+    &__bottom{
+        top: 100%;
+        margin-top: -2px;
+    }
+    &__text {
+        margin-top: toRemM(16);
+    }
+    &__tabs {
+        margin-top: toRemM(16);
+    }
+    &__programs {
+        margin-top: toRemM(24);
+    }
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        & + & {
+            margin-left: toRemM(16);
+        }
+    }
+    &__slider-cards {
+        margin-top: toRemM(24);
+    }
+    @media (min-width: $tablet) {
+        &--special-camp {
+            padding-top: toRemM(88);
+        }
+        &__top, &__point, &__bottom{
+            img{
+                &.mobile{
+                    display: none;
+                }
+                &.tablet{
+                    display: block;
+                }
+            }
+        }
+        &__top{
+            margin-bottom: -10%;
+        }
+        &__point {
+            bottom: 55%;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__text {
+            margin: toRemM(16) auto 0;
+            text-align: center;
+            max-width: toRemM(400);
+        }
+        &__tabs {
+            margin-top: toRemM(20);
+            text-align: center;
+        }
+        &__item {
+            & + & {
+                margin-left: toRemM(24);
+            }
+        }
+        &__slider-cards {
+            margin-top: toRemM(32);
+        }
+    }
+    @media (min-width: $desktop) {
+        padding-top: toRem(8);
+        padding-bottom: toRem(20);
+        &--special-camp {
+            padding-top: toRem(104);
+        }
+        &__top, &__point,&__bottom{
+            img{
+                &.tablet{
+                    display: none;
+                }
+                &.desktop{
+                    display: block;
+                }
+            }
+        }
+        &__top {
+            margin-bottom: -11%;
+        }
+        &__point {
+            bottom: 55%;
+        }
+        &__text {
+            margin-top: toRem(16);
+            max-width: toRem(400);
+        }
+        &__tabs {
+            margin-top: toRem(20);
+        }
+        &__programs {
+            margin-top: toRem(24);
+        }
+        &__item {
+            & + & {
+                margin-left: toRem(72);
+            }
+        }
+        &__slider-cards {
+            margin-top: toRem(32);
+        }
+    }
+}
+
+.history + .all-people{
+    margin-top: toRemM(104);
+    @media (min-width: $tablet) {
+        margin-top: toRemM(136);
+    }
+    @media (min-width: $desktop) {
+        margin-top: toRem(144);
+    }
+}

@@ -1,0 +1,101 @@
+.article-page {
+    padding: toRemM(72) 0 toRemM(64);
+    
+    text-align: center;
+    
+    &__link {
+        margin-bottom: toRemM(12);
+    }
+    
+    &__title {
+        display: inline-block;
+        margin-bottom: toRemM(24);
+        max-width: toRemM(408);
+    }
+    
+    &__text {
+        text-align: left;
+    }
+    
+    &__image {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 71.25vw;
+        border-radius: toRemM(12);
+        overflow: hidden;
+        margin-bottom: toRemM(12);
+        
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &__tag {
+        margin-bottom: toRemM(8);
+        
+        & + & {
+            margin-left: toRemM(8);
+        }
+    }
+    
+    @media (min-width: $tablet) {
+        padding: toRemM(92) 0 toRemM(72);
+    
+        &__title {
+            margin-bottom: toRemM(32);
+        }
+        
+        &__link {
+            width: 100%;
+        }
+    
+        &__image {
+            width: 80.555555%;
+            height: 41.25vw;
+        }
+        
+        &__text {
+            margin: 0 auto;
+            max-width: toRemM(500);
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: toRem(96) 0 toRem(72);
+    
+        &__link {
+            margin-bottom: toRem(12);
+        }
+    
+        &__title {
+            margin-bottom: toRem(32);
+            max-width: toRem(800);
+        }
+    
+        &__text {
+            max-width: toRem(500);
+        }
+    
+        &__image {
+            width: toRem(600);
+            height: 28.333333vw;
+            border-radius: toRem(12);
+            margin-bottom: toRem(16);
+        }
+    
+        &__tag {
+            margin-bottom: toRem(8);
+        
+            & + & {
+                margin-left: toRem(8);
+            }
+        }
+    }
+}

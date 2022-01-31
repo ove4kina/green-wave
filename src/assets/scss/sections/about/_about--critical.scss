@@ -1,0 +1,41 @@
+.about{
+    padding: toRemM(32) 0 toRemM(64);
+    &__text{
+        margin-bottom: toRemM(20);
+    }
+    &__image{
+        img{
+            width: 100%;
+        }
+    }
+    @media (min-width: $tablet) {
+        padding: 11.25vw 0 15vw;
+        &__wrapper{
+            position: relative;
+        }
+        &__text{
+            margin-bottom: 0;
+            width: 50%;
+            margin-left: 50%;
+        }
+        &__image{
+            width: 50%;
+            position: absolute;
+            left: 0;
+            top: 58%;
+            transform: translate(0,-50%);
+            img{
+                width: 91.3%;
+            }
+        }
+    }
+    @media (min-width: $desktop) {
+        padding: 11.83vw 0 13vw;
+        &__image{
+            top: 52%;
+            img{
+                width: 92%;
+            }
+        }
+    }
+}

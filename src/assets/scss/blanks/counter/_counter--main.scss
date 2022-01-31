@@ -1,0 +1,14 @@
+.counter{
+    &__button{
+        cursor: pointer;
+    }
+    &__value{
+        span{
+            transition: 0.3s ease;
+            &.hide{
+                opacity: 0;
+                transform: translate(0,5px);
+            }
+        }
+    }
+}
